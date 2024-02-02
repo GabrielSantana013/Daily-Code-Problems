@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+    int vector[5], result[5];
+    
+    for(int i = 0; i<5; i++)
+    {
+        result[i] = 1;
+    }
+    
+    for(int i = 0; i<=4; i++)
+    {
+        printf("Enter the number %d: ", i+1);
+        scanf("%d", &vector[i]);
+    }
+    
+    for(int i = 0; i <5; i++)
+    {
+        for(int j = 0; j<5; j++)
+        {
+            if(j == i)
+            {
+                j++;
+            }
+            else
+            {
+                result[i] *= vector[j];
+            }
+        }
+    }
+    
+    for(int i = 0; i<5; i++)
+    {
+    printf("Result: %d", result[i]);
+    }
+    return 0;
+}
